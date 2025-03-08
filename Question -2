@@ -1,16 +1,10 @@
 // Write a function that accepts a string and a number. If the number is not provided, the default should be 10. The function should return the string repeated that many times
 
-import React from 'react';
-
-function RepeatString({ text, count = 10 }) {
-  const repeatedString = text.repeat(count);
-
-  return (
-    <div>
-      <h1>String Repeater</h1>
-      <p>{repeatedString}</p>
-    </div>
-  );
+function repeatString(str, num = 10) {
+  return str.repeat(num);
 }
+
+console.log(repeatString("Hello")); 
+console.log(repeatString("Hi", 3)); 
 
 
