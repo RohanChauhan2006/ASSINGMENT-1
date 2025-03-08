@@ -1,0 +1,60 @@
+// Write a JavaScript function that demonstrates the differences between let, const, and var. Include examples of scoping issues that may occur with var and how let and const behave differently in block scope
+function demonstrateScope() {
+    if (true) {
+      var varVariable = 'I am var';
+      let letVariable = 'I am let';
+      const constVariable = 'I am const';
+  
+      console.log('Inside block scope:');
+      console.log(varVariable); 
+      console.log(letVariable); 
+      console.log(constVariable); 
+    }
+  
+    console.log('Outside block scope:');
+    console.log(varVariable); 
+  
+    try {
+      console.log(letVariable);
+    } catch (error) {
+      console.error('Error:', error.message);
+    }
+  
+    try {
+      console.log(constVariable); 
+    } catch (error) {
+      console.error('Error:', error.message);
+    }
+  
+    
+    var varVariable = 'I am redeclared var'; 
+    console.log(varVariable); 
+  
+    try {
+      let letVariable = 'I am redeclared let'; 
+    } catch (error) {
+      console.error('Error:', error.message);
+    }
+  
+    try {
+      const constVariable = 'I am redeclared const'; 
+    } catch (error) {
+      console.error('Error:', error.message);
+    }
+  
+    // Modifying variables
+    var varVariable = 'I am modified var'; 
+    let letVariable = 'I am new let variable';
+    console.log(varVariable); 
+    console.log(letVariable); 
+  
+    try {
+      const constVariable = 'I am new const variable'; 
+      constVariable = 'I am modified const'; 
+    } catch (error) {
+      console.error('Error:', error.message);
+    }
+  }
+  
+  demonstrateScope();
+  
