@@ -1,16 +1,13 @@
 // Create a function that accepts multiple numbers and returns their sum using the rest operator.
 
-import React from 'react';
-
-function SumComponent({ numbers }) {
-  const sumNumbers = (...nums) => nums.reduce((total, num) => total + num, 0);
-
-  return (
-    <div>
-      <h1>Sum Calculator</h1>
-      <p>The sum of the numbers is: {sumNumbers(...numbers)}</p>
-    </div>
-  );
+function sumNumbers(...numbers) {
+  return numbers.reduce((total, num) => total + num, 0);
 }
+
+
+console.log(sumNumbers(10, 20, 30)); 
+console.log(sumNumbers(5, 15, 25, 35)); 
+
+
 
 
