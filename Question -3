@@ -5,4 +5,5 @@ const sumArray = (numbers) => numbers.reduce((sum, num) => sum + num, 0);
 
 const myArray = [1, 2, 3, 4, 5];
 const result = sumArray(myArray);
-console.log(result); // Output: 15
+console.log(result); 
+
