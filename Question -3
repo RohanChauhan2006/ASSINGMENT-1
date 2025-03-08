@@ -1,0 +1,15 @@
+// 	Write a JavaScript function that uses an arrow function to find the sum of all numbers in an array
+
+import React from 'react';
+
+function SumArrayComponent({ numbers }) {
+  const calculateSum = (nums) => nums.reduce((total, num) => total + num, 0);
+
+  return (
+    <div>
+      <h1>Array Sum</h1>
+      <p>The sum of the array is: {calculateSum(numbers)}</p>
+    </div>
+  );
+}
+
